@@ -1,0 +1,32 @@
+# Provisioning the environments with necessary app files
+
+---
+
+- name: Synchronising instance
+  hosts: live_env
+  gather_facts: yes
+  become: true
+
+  tasks:
+  - name: Sync App_Files
+    synchronize:
+      src: /home/ubuntu/App_Files
+      dest: /home/ubuntu/
+    become: true
+
+  - name: Update sources lsit
+    apt:
+      update_cache: yes
+
+  - name: Install python dependencies
+    apt:
+      name:
+        - python3
+        - python-pip
+        - python3-pip
+      state: present
+
+  - name: Install all dependencies from requirements.txt
+    shell: python3 -m pip install -r App_Files/requirements.txt
+
+    # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml

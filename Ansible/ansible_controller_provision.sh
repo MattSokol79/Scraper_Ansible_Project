@@ -9,8 +9,8 @@ sudo apt install python3 -y
 sudo apt install python3-pip -y
 sudo pip3 install --upgrade pip
 
-# Installing AWS deps
-pip3 install awscli # Amazon Comand-Line-Interface
+# Installing AWS dependencies
+pip3 install awscli # AWS interface
 pip3 install boto3
 pip3 install nose
 pip3 install tornado

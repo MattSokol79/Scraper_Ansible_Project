@@ -31,3 +31,11 @@
     become: true
 
     # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml -u ubuntu
+
+#    scp -o "StrictHostKeyChecking=no" -i $AWS_ACCESS -r App_Files/ ubuntu@34.244.153.28:~/
+#    ssh -o "StrictHostKeyChecking=no" -i $AWS_ACCESS ubuntu@34.244.153.28<<EOF
+#    sudo apt update
+#    sudo apt install python3 -y
+#    sudo apt install python3-pip -y
+#    python3 -m pip install -r App_Files/requirements.txt
+#    EOF

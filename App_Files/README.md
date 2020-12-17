@@ -43,4 +43,4 @@ Follow the instructions to download via the various options given.
 * create a connected database for full deployment
 * Build a scheduler as part of a full deployment to poll and add to the database
 
-Testing dev branch - with Jenkins - test2 - Test 3 - Test 4 - Test 5 
+CI Final Test

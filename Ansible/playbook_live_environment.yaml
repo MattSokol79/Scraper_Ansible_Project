@@ -1,0 +1,63 @@
+---
+- name: EC2 Instance for Deployment Environment
+  hosts: local
+  connection: local
+  gather_facts: yes
+  become: true
+
+  vars:
+    key_name: eng74.matt.aws.key
+    region: eu-west-1
+    image: ami-0dc8d444ee2a42d8a
+    id: "eng74-matt-scraper-live"
+    sec_group: sg-0bd4d2d9276a80478
+    subnet_id: subnet-0182caedafed04f88
+    ansible_python_interpreter: /usr/bin/python3
+
+
+  tasks:
+  - name: Install python dependencies
+    apt:
+      name:
+        - python3
+        - python-pip
+        - python3-pip
+      state: present
+
+  - name: Installing pip dependencies
+    pip:
+      name:
+        - boto
+        - boto3
+        - nose
+        - tornado
+        - awscli
+      state: present
+
+  - name: Get instance facts
+    ec2_instance_facts:
+      aws_access_key: "{{ aws_access_key }}"
+      aws_secret_key: "{{ aws_secret_key }}"
+      region: "{{ region }}"
+    register: result
+
+  - name: Create EC2 instance
+    ec2:
+      aws_access_key: "{{ aws_access_key }}"
+      aws_secret_key: "{{ aws_secret_key }}"
+      assign_public_ip: true
+      key_name: "{{ key_name }}"
+      id: "{{ id }}"
+      vpc_subnet_id: "{{ subnet_id }}"
+      group_id: "{{ sec_group }}"
+      image: "{{ image }}"
+      instance_type: t2.micro
+      region: "{{ region }}"
+      wait: true
+      count: 1
+      instance_tags:
+        Name: eng74-matt-scraper-live
+
+  tags: ['never', 'create_ec2']
+
+  # sudo ansible-playbook playbook_name.yaml --ask-vault --tags create_ec2

@@ -1,5 +1,6 @@
 ---
-- hosts: local
+- name: EC2 Instance for Testing Environment
+  hosts: local
   connection: local
   gather_facts: yes
   become: true
@@ -8,10 +9,10 @@
     key_name: eng74.matt.aws.key
     region: eu-west-1
     image: ami-0dc8d444ee2a42d8a
-    id: "Matt Ansible EC2 Creation"
-    sec_group: sg-0f89f296c11933e34
-    subnet_id:  subnet-00ac052b1e40c0164
-    # ansible_python_interpreter: /urs/bin/python3
+    id: "eng74-matt-scraper-test"
+    sec_group: sg-0bd4d2d9276a80478
+    subnet_id: subnet-0182caedafed04f88
+    ansible_python_interpreter: /urs/bin/python3
 
 
   tasks:
@@ -55,6 +56,8 @@
       wait: true
       count: 1
       instance_tags:
-        Name: eng74-matt-ansible-ec2
+        Name: eng74-matt-scraper-test
 
   tags: ['never', 'create_ec2']
+
+ # sudo ansible-playbook playbook_name.yaml --ask-vault --tags create_ec2

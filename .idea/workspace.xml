@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59c8f776-0e23-4dbb-bd4e-2fac5920428e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ansible/ansible_provision.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ansible/create_ec2.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ansible/dependencies.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Files/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/App_Files/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Files/tests/test_csv_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Files/tests/test_csv_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Files/tests/test_html_object_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Files/tests/test_html_object_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Files/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/App_Files/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

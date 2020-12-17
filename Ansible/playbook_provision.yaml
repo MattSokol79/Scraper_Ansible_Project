@@ -6,6 +6,8 @@
   hosts: live_env
   gather_facts: yes
   become: true
+  become_user: root
+  become_method: sudo
 
   tasks:
   - name: Sync App_Files
@@ -14,10 +16,6 @@
       dest: /home/ubuntu/
     become: true
 
-  - name: Update sources lsit
-    apt:
-      update_cache: yes
-
   - name: Install python dependencies
     apt:
       name:
@@ -25,8 +23,11 @@
         - python-pip
         - python3-pip
       state: present
+      update_cache: true
+    become: true
 
   - name: Install all dependencies from requirements.txt
     shell: python3 -m pip install -r App_Files/requirements.txt
+    become: true
 
-    # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml
+    # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml -u ubuntu

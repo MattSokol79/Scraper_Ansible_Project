@@ -16,6 +16,12 @@
       dest: /home/ubuntu/
     become: true
 
+  - name: Sync Flask folder
+    synchronize:
+      src: /home/ubuntu/Flask
+      dest: /home/ubuntu/
+    become: true
+
   - name: Install python dependencies
     apt:
       name:

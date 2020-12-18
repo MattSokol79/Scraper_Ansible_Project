@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59c8f776-0e23-4dbb-bd4e-2fac5920428e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Flask/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ansible/playbook_provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Ansible/playbook_provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flask/flask_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/flask_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flask/webpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/webpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/webpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/templates/webpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sparta\engineering74\Scrapper_Ansible_Project\Flask\templates" />
       <recent name="C:\Users\Sparta\engineering74\Scrapper_Ansible_Project\Ansible" />
     </key>
   </component>

@@ -14,13 +14,10 @@ app.config['SERVER_NAME'] = 'localhost:3000'
 
 @app.route('/')
 def homepage():
-    jobs_csv = pd.read_csv(r'C:\\Users\\poiro\\Downloads\\ItJobsWatchTop30.csv')
-    data_frame = pd.DataFrame(jobs_csv, columns=['Skill / Job Role(Historical trends and salary statistics)',
-                                                      'Rank6 Months to17 Dec 2020', 'RankChangeYear-on-Year',
-                                                      'Median Salary6 Months to17 Dec 2020',
-                                                      'Median Salary ChangeYear-on-Year', 'HistoricalPermanentJob Ads',
-                                                      'LiveJobVacancies'])
-    return render_template("webpage.html", name='ITJobsWatch Top 30', data=data_frame)
+    jobs_csv = pd.read_csv(r"C:\Users\poiro\Downloads\ItJobsWatchTop30.csv", encoding='unicode_escape')
+
+
+    return render_template("webpage.html", name='ITJobsWatch Top 30', data=jobs_csv.to_html())
 
 
 if __name__ == "__main__":

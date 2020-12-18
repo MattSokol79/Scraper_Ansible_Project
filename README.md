@@ -50,7 +50,9 @@ need to make sure is located in the `/etc/ansible/` directory
 - Now we can run playbooks to create EC2 instances  
 
 ## Testing environment
-- We can create the testing environment by simply running a playbook:
+- We can create the testing environment by simply running a playbook: (Ensure to change
+relevant information in the playbook with your own information e.g. aws access key, name
+of instance etc)
 `sudo ansible-playbook playbook_test_env.yaml --ask-vault --tags create_ec2`
 - Ensure to provide your vault password when prompted  
-  
+- If the build

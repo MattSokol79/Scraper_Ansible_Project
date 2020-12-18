@@ -35,14 +35,14 @@
       path: ~/Downloads
       state: directory
 
-  - name: Start the app and download the csv file into the downloads folder
-    shell: |
-      cd App_Files
-      python3 main.py
-      1
-      2
-      exit
-    become: true
+#  - name: Start the app and download the csv file into the downloads folder
+#    shell: |
+#      cd App_Files
+#      python3 main.py
+#      1
+#      2
+#      exit
+#    become: true
 
 
     # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml -u ubuntu

@@ -38,7 +38,8 @@
   - name: Start the app and download the csv file into the downloads folder
     shell: |
       cd App_Files
-      python main.py
+      python3 main.py
+      1
       2
     become: true
 

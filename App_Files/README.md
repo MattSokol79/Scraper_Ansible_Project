@@ -44,3 +44,4 @@ Follow the instructions to download via the various options given.
 * Build a scheduler as part of a full deployment to poll and add to the database
 
 Testing CI CD with running app
+Test with python3

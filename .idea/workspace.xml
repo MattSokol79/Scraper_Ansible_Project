@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="59c8f776-0e23-4dbb-bd4e-2fac5920428e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ansible/playbook_provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Ansible/playbook_provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Files/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/App_Files/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flask/flask_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/flask_routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

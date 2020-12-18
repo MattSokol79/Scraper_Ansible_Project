@@ -30,6 +30,18 @@
     shell: python3 -m pip install -r App_Files/requirements.txt
     become: true
 
+  - name: Creates a Downloads folder so the app puts the csv there
+    file:
+      path: ~/Downloads
+      state: directory
+
+  - name: Start the app and download the csv file into the downloads folder
+    shell: |
+      cd App_Files
+      python main.py
+      2
+    become: true
+
     # sudo ansible-playbook --ask-vault-pass playbook_provision.yaml -u ubuntu
 
 #    scp -o "StrictHostKeyChecking=no" -i $AWS_ACCESS -r App_Files/ ubuntu@34.244.153.28:~/
